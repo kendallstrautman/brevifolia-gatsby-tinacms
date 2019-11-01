@@ -1,9 +1,9 @@
 <p align="center">
-  <a style="padding-right: 16px;" href="https://forestry.io">
-    <img src="/static/Tina_Llama.svg" width="112" height="28">
+  <a style="padding-right: 16px;" href="https://tinacms.org">
+    <img src="/static/Tina_Llama.svg" width="50" height="36">
   </a>
   <a href="https://www.gatsbyjs.org/">
-    <img src="/static/gatsby_logo.svg" width="28" height="28">
+    <img src="/static/gatsby_logo.svg" width="50" height="32">
   </a>
 </p>
 <h1 align="center">
