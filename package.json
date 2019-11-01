@@ -7,7 +7,7 @@
   "author": "kendall strautman",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop -o",
+    "dev": "gatsby develop",
     "develop": "yarn dev",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn dev",
