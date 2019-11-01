@@ -1,4 +1,5 @@
 const config = require("./config.json")
+require("dotenv").config();
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -71,6 +72,9 @@ module.exports = {
           "gatsby-tinacms-git",
           "gatsby-tinacms-remark",
         ],
+        sidebar: {
+          hidden: process.env.NODE_ENV === "production"
+        },
       },
     },
   ],

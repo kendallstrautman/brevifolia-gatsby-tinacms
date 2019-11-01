@@ -54,7 +54,9 @@ export default function Info(props) {
   }
 
   const [ infoData ]  = useJsonForm(props.data.dataJson, formOptions)
-
+  
+  // const infoData = props.data.dataJson
+  console.error(infoData)
   return (
     <Layout page="info" bgColor={infoData.background_color}>
       <section className={infoStyles.info_blurb}>
@@ -84,7 +86,7 @@ export default function Info(props) {
       </section>
     </Layout>
   )
-  
+
 }
 
 export const data = graphql`
