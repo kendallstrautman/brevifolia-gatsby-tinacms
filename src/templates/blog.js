@@ -85,6 +85,7 @@ const BlogTemplateOptions = {
         return markdownRemark.frontmatter.hero_image.childImageSharp.fluid.src
       },
     },
+    //TODO: when select field is added, switch to select from authors.json
     {
       label: "Author",
       name: 'rawFrontmatter.author',
