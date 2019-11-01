@@ -1,5 +1,4 @@
 const config = require("./config.json")
-const infoData = require("./content/data/info.json")
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -7,16 +6,12 @@ module.exports = {
     title: config.title,
     description: config.description,
     repoUrl: config.repository_url,
-    about: config.about,
-    contact: config.contact,
-    primaryColor: config.primary_color,
-    infoData: infoData
   },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
-    "gatsby-transformer-yaml",
+    "gatsby-transformer-json",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -68,6 +63,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-tinacms-json',
     {
       resolve: 'gatsby-plugin-tinacms',
       options: {
