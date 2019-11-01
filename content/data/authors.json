@@ -1,0 +1,11 @@
+{
+    "authors": [
+        { "name": "Robert Thoreau" },
+        { "name": "Allen Ginsberg" },
+        { "name": "Friedrich Nietzsche" },
+        { "name": "Walt Whitman" },
+        { "name": "Grace Hopper" },
+        { "name": "Ralph Waldo Emerson" },
+        { "name": "Watson & Crick" }
+    ]
+}
