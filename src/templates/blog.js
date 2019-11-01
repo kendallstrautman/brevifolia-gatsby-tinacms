@@ -8,7 +8,6 @@ import { remarkForm } from 'gatsby-tinacms-remark'
 import useBlogData from '../static_queries/useBlogData'
 import blogTemplateStyles from "../styles/templates/blog.module.scss"
 
-
 function Blog(props) {
   const data = props.data.markdownRemark
   const allBlogData = useBlogData()
@@ -58,7 +57,48 @@ function Blog(props) {
   )
 }
 
-export default remarkForm( Blog )
+const BlogTemplateOptions = {
+  fields: [
+    {
+      label: "Blog Title",
+      name: 'rawFrontmatter.title',
+      component: "text"
+    },
+    {
+      label: "Date Posted",
+      name: 'rawFrontmatter.date',
+      component: "date"
+    },
+    {
+      label: "Hero Image",
+      name: 'rawFrontmatter.hero_image',
+      component: "image",
+      // Generate the frontmatter value based on the filename
+      parse: filename => `/content/images/${filename}`,
+
+      // Decide the file upload directory for the post
+      uploadDir: () => "/content/images/",
+
+      // Generate the src attribute for the preview image.
+      previewSrc: markdownRemark => {
+        if (!markdownRemark.frontmatter.hero_image) return ""
+        return markdownRemark.frontmatter.hero_image.childImageSharp.fluid.src
+      },
+    },
+    {
+      label: "Author",
+      name: 'rawFrontmatter.author',
+      component: "text"
+    },
+    {
+      label: "Blog Body",
+      name: 'rawMarkdownBody',
+      component: "markdown"
+    },
+  ]
+}
+
+export default remarkForm( Blog, BlogTemplateOptions )
 
 //dynamic page query, must occur within each post context
 //$slug is made available by context from createPages call in gatsby-node.js
