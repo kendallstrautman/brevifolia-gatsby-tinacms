@@ -52,9 +52,13 @@ A new browser window should open with the dev server running or you can navigate
 
 With Gatsby offering a plugin-rich ecosystem, there are a few key plugins that make this project possible. 
 
+- [Gatsby-plugin-tinacms](https://github.com/tinacms/tinacms/tree/master/packages/gatsby-plugin-tinacms) allows us to use TinaCMS with Gatsby
+- [Gatsby-tinacms-git](https://github.com/tinacms/tinacms/tree/master/packages/gatsby-tinacms-git) does the Tina magic for talking to Git
+- [Gatsby-tinacms-json](https://github.com/tinacms/tinacms/tree/master/packages/gatsby-tinacms-json) helps us edit json data in our form fields.
+- [Gatsby-tinacms-remark](https://github.com/tinacms/tinacms/tree/master/packages/gatsby-tinacms-remark) helps us edit markdown content from the blog.
 - [Gatsby-image](https://using-gatsby-image.gatsbyjs.org/) optimizes image loading and provides the correct file paths for output. 
 - [Gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/?=gatsby-tranf) gives us access to and transforms the markdown files, using also [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/?=gatsby-remark), [gatsby-remark-normalize-paths](https://www.gatsbyjs.org/packages/gatsby-remark-normalize-paths/?=gatsby-remark-no), & [gatsby-remark-relative-images](https://www.gatsbyjs.org/packages/gatsby-remark-relative-images/?=gatsby-remark-re) to make sure the content in the markdown works properly. 
-- [Gatsby-transformer-json](https://www.gatsbyjs.org/packages/gatsby-transformer-yaml/?=gatsby-tranfor) allows us to use the data in .json files.
+- [Gatsby-transformer-json](https://www.gatsbyjs.org/packages/gatsby-transformer-json/?=gatsby-tranfor) allows us to use the data in .json files.
 - [Gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/?=gatsby-plugin-sass) lets us write styles using scss or sass. 
 - [Gatsby-plugin-react-helmet](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/?=gatsby-plugin-react) extends the well-known react-helmet, allowing you to adjust content in the ‘head’ of your components. 
 
