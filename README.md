@@ -72,7 +72,7 @@ With Gatsby offering a plugin-rich ecosystem, there are a few key plugins that m
 
 ## Using Tina as your CMS
 
-TODO //.................................
+[Tina](https://tinacms.org) is an open-source site editing toolkit for React-based frameworks — Gatsby & Next.js. It's a lightweight but powerful toolkit for creating a content editing interface with JavaScript components. Tina allows you to create an intuitive UI for real-time content editing, built directly into your site. To learn more about using Tina with this starter, head over to the [Tina docs](https://tinacms.org/docs/getting-started/introduction). To get started editing with Tina, get the project up and running locally, open up the UI and navigate around to see what you can edit!
 
 ## Deploy Options
 
