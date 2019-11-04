@@ -1,10 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from 'gatsby-image'
+import { withPlugin } from 'react-tinacms'
+import { createRemarkButton } from 'gatsby-tinacms-remark'
+
 import useBlogData from "../static_queries/useBlogData"
 import blogListStyles from "../styles/components/bloglist.module.scss"
-import Img from 'gatsby-image'
 
-export default function BlogList() {
+function BlogList() {
   const blogData = useBlogData()
   function renderBlogData() {
     return (
@@ -42,3 +45,58 @@ export default function BlogList() {
   )
 }
 
+const CreateBlogButton = createRemarkButton({
+    label: 'Add New Post',
+    filename: name => {
+      //replace all spaces for hyphen
+    let slug = name.title.replace(/\s+/g, '-').toLowerCase()
+
+    return `content/posts/${slug}.md`
+    },
+    fields: [
+      {
+        name: "hero",
+        description: "Pick a good one",
+        label: "Hero",
+        component: "image",
+        // Generate the frontmatter value based on the filename
+        parse: filename => `/content/images/${filename}`,
+        // Decide the file upload directory for the image
+        uploadDir: () => {
+          return "/content/images/"
+        },
+        // Todo: Fix the preview source
+        previewSrc: (postInfo) => {
+          return postInfo.hero
+        },
+      },
+      {
+        label: 'Title',
+        name: 'title',
+        component: 'text',
+        required: true
+      },
+      {
+        label: 'Date',
+        name: 'date',
+        component: 'date',
+        description: 'The default will be today'
+      },
+      {
+        label: 'Author',
+        description: 'Who wrote this, yo?',
+        name: 'author',
+        component: 'text'
+      }
+    ],
+    frontmatter: (postInfo) => {
+      return ({
+      title: postInfo.title,
+      date: new Date(),
+      //choosing a default image so we don't get an error
+      hero_image: postInfo.hero ? postInfo.hero : '/content/images/ren-ran-bBiuSdck8tU-unsplash.jpg'})
+    },
+    body: () => `New post, who dis?`
+  })
+
+export default withPlugin(BlogList, CreateBlogButton);
