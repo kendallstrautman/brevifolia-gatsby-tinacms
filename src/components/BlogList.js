@@ -45,7 +45,7 @@ function BlogList() {
   )
 }
 
-const CreateBlogButton = createRemarkButton({
+const CreateBlogButton = createRemarkButton( {
     label: 'Add New Post',
     filename: name => {
       //replace all spaces for hyphen
@@ -54,22 +54,23 @@ const CreateBlogButton = createRemarkButton({
     return `content/posts/${slug}.md`
     },
     fields: [
-      {
-        name: "hero",
-        description: "Pick a good one",
-        label: "Hero",
-        component: "image",
-        // Generate the frontmatter value based on the filename
-        parse: filename => `/content/images/${filename}`,
-        // Decide the file upload directory for the image
-        uploadDir: () => {
-          return "/content/images/"
-        },
-        // Todo: Fix the preview source
-        previewSrc: (postInfo) => {
-          return postInfo.hero
-        },
-      },
+      // Commented out until we find a solution for previewSrc
+      // {
+      //   name: "hero",
+      //   description: "Pick a good one",
+      //   label: "Hero",
+      //   component: "image",
+      //   // Generate the frontmatter value based on the filename
+      //   parse: filename => `/content/images/${filename}`,
+      //   // Decide the file upload directory for the image
+      //   uploadDir: () => {
+      //     return "/content/images/"
+      //   },
+      //   // Todo: Fix the preview source
+      //   previewSrc: (postInfo) => {
+      //     return postInfo.hero
+      //   },
+      // },
       {
         label: 'Title',
         name: 'title',
