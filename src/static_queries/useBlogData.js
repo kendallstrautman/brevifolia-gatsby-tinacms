@@ -26,6 +26,16 @@ export default function useBlogData() {
           }
         }
       }
+      allImageSharp {
+        edges {
+          node {
+            fluid {
+              src
+              originalName
+            }
+          }
+        }
+      }
     }
   `)
   return data.allMarkdownRemark.edges

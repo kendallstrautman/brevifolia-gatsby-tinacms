@@ -6,7 +6,7 @@
   "version": "0.1.0",
   "author": "kendall strautman",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build NODE_ENV=production",
     "dev": "gatsby develop",
     "develop": "yarn dev",
     "format": "prettier --write src/**/*.{js,jsx}",
@@ -16,6 +16,7 @@
     "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "gatsby": "^2.13.9",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-react-helmet": "^3.1.0",
