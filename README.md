@@ -64,7 +64,7 @@ With Gatsby offering a plugin-rich ecosystem, there are a few key plugins that m
 
 ## Project Structure 
 
-- Site-level configuration is stored in `config.json` so it can be exposed to Forestry. This file is loaded in the `gatsby-config.js` to configure Gatsby and all it to be accessible via siteMetaData in your graphql queries.
+- Site-level configuration is stored in `config.json`. This file is loaded in the `gatsby-config.js` to configure Gatsby and all it to be accessible via siteMetaData in your graphql queries.
 - Access any of Gatsby's [browser api's](https://www.gatsbyjs.org/docs/browser-apis/) via the `gatsby-browser.js`, or load global styles etc.
 - Add and access plugin options or siteMetaData via `gatsby-config.js`
 - Access Gatsby's [node api's](https://www.gatsbyjs.org/docs/node-apis/) via `gatsby-node.js`. This is where the creation of new blog pages or nodes is handled. 
