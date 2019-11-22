@@ -64,7 +64,7 @@ With Gatsby offering a plugin-rich ecosystem, there are a few key plugins that m
 
 ## Project Structure 
 
-- Site-level configuration is stored in `config.json` so it can be exposed to Forestry. This file is loaded in the `gatsby-config.js` to configure Gatsby and all it to be accessible via siteMetaData in your graphql queries.
+- Site-level configuration is stored in `config.json`. This file is loaded in the `gatsby-config.js` to configure Gatsby and all it to be accessible via siteMetaData in your graphql queries.
 - Access any of Gatsby's [browser api's](https://www.gatsbyjs.org/docs/browser-apis/) via the `gatsby-browser.js`, or load global styles etc.
 - Add and access plugin options or siteMetaData via `gatsby-config.js`
 - Access Gatsby's [node api's](https://www.gatsbyjs.org/docs/node-apis/) via `gatsby-node.js`. This is where the creation of new blog pages or nodes is handled. 
@@ -78,8 +78,3 @@ With Gatsby offering a plugin-rich ecosystem, there are a few key plugins that m
 
 [Tina](https://tinacms.org) is an open-source site editing toolkit for React-based frameworks — Gatsby & Next.js. It's a lightweight but powerful toolkit for creating a content editing interface with JavaScript components. Tina allows you to create an intuitive UI for real-time content editing, built directly into your site. To learn more about using Tina with this starter, head over to the [Tina docs](https://tinacms.org/docs/getting-started/introduction). To get started editing with Tina, get the project up and running locally, open up the UI and navigate around to see what you can edit!
 
-## Deploy Options
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kendallstrautman/brevifolia-gatsby-forestry)
-
-[Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) is a great way to easily deploy sites. 
