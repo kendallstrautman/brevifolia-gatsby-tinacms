@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from 'gatsby'
-import { useJsonForm } from 'gatsby-tinacms-json'
+import { useLocalJsonForm } from 'gatsby-tinacms-json'
 
 import Layout from "../components/Layout"
 import infoStyles from "../styles/pages/info.module.scss"
@@ -53,7 +53,7 @@ export default function Info(props) {
     ]
   }
 
-  const [ infoData ]  = useJsonForm(props.data.dataJson, formOptions)
+  const [ infoData ]  = useLocalJsonForm(props.data.dataJson, formOptions)
   
   // const infoData = props.data.dataJson
   console.error(infoData)
