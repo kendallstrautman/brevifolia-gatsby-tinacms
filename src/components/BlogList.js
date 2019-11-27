@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from 'gatsby-image'
 import { withPlugin } from 'react-tinacms'
-import { createRemarkButton } from 'gatsby-tinacms-remark'
+import { RemarkCreatorPlugin } from 'gatsby-tinacms-remark'
 
 import useBlogData from "../static_queries/useBlogData"
 import blogListStyles from "../styles/components/bloglist.module.scss"
@@ -45,7 +45,7 @@ function BlogList() {
   )
 }
 
-const CreateBlogButton = createRemarkButton( {
+const CreateBlogButton = new RemarkCreatorPlugin( {
     label: 'Add New Post',
     filename: name => {
       //replace all spaces for hyphen
