@@ -1,4 +1,5 @@
 const config = require("./config.json")
+const path = require("path")
 const REPO_ABSOLUTE_PATH = path.join(process.cwd(), "../..")
 
 module.exports = {
