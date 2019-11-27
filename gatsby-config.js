@@ -1,4 +1,5 @@
 const config = require("./config.json")
+const REPO_ABSOLUTE_PATH = path.join(process.cwd(), "../..")
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -68,8 +69,18 @@ module.exports = {
       resolve: 'gatsby-plugin-tinacms',
       options: {
         plugins: [
-          "gatsby-tinacms-git",
           "gatsby-tinacms-remark",
+          {
+            resolve: 'gatsby-tinacms-git',
+            options: {
+              pathToRepo: REPO_ABSOLUTE_PATH,
+              pathToContent: 'content',
+              defaultCommitMessage: 'Content Update ',
+              defaultCommitName: 'TinaCMS',
+              defaultCommitEmail: 'kendallstrautman@gmail.com',
+              pushOnCommit: false,
+            },
+          },
         ],
         sidebar: {
           hidden: process.env.NODE_ENV === "production"
