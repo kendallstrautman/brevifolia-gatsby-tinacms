@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from 'gatsby-image'
-import { withPlugin } from 'react-tinacms'
+import { withPlugin } from 'tinacms'
 import { RemarkCreatorPlugin } from 'gatsby-tinacms-remark'
 
 import useBlogData from "../static_queries/useBlogData"
