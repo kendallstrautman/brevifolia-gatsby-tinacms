@@ -1,5 +1,5 @@
 {
-  "name": "foresry-starter-blog-gatsby",
+  "name": "brevifolia-gatsby-tinacms",
   "private": true,
   "description": "A simple starter blog to get up and developing quickly with Forestry & Gatsby",
   "license": "MIT",
@@ -12,8 +12,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn dev",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -47,10 +46,10 @@
   },
   "keywords": [
     "gatsby",
-    "forestry"
+    "tinacms"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/forestryio/brevifolia-gatsby-forestry"
+    "url": "https://github.com/kendallstrautman/brevifolia-gatsby-tinacms"
   }
 }
