@@ -1,7 +1,7 @@
 {
   "name": "brevifolia-gatsby-tinacms",
   "private": true,
-  "description": "A simple starter blog to get up and developing quickly with Forestry & Gatsby",
+  "description": "A simple starter blog to get up and developing quickly with Gatsby & TinaCMS",
   "license": "MIT",
   "version": "0.1.0",
   "author": "kendall strautman",
