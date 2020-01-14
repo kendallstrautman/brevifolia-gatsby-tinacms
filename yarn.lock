@@ -1276,14 +1276,6 @@
     multer "1.4.2"
     simple-git "1.126.0"
 
-"@tinacms/core@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@tinacms/core/-/core-0.5.1.tgz#79bfd24850715d8011e94aa6085da347c6487850"
-  integrity sha512-K127PMZIpQ7ngumuLsn5zA3QsMy0R5gFNn3Cgkd74h9DIvSMHl4ig3Y1vUwXunh1+X2tLGeJBlSqrNhv4Fz9kw==
-  dependencies:
-    final-form "^4.18.2"
-    final-form-arrays "^3.0.1"
-
 "@tinacms/core@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@tinacms/core/-/core-0.6.0.tgz#a5827c8338c2d17be232a2349be8cd2f8b563c81"
@@ -1320,7 +1312,7 @@
     react-dropzone "10.1.8"
     react-select "^2.3.0"
 
-"@tinacms/form-builder@^0.2.11", "@tinacms/form-builder@^0.2.9":
+"@tinacms/form-builder@^0.2.11":
   version "0.2.11"
   resolved "https://registry.yarnpkg.com/@tinacms/form-builder/-/form-builder-0.2.11.tgz#3286e3b04901287f65636c823b5fe3ea8a0e0ecc"
   integrity sha512-9GOCbshHndWm2p2YjTkZL/y5vU+EmvUGDZmD84T/ySRLXIu/MT10VzNFXid2Q4Gdm52BCuGavpy/xMvZeLOB9g==
@@ -5988,22 +5980,6 @@ gatsby-plugin-sharp@^2.2.3:
     svgo "1.3.2"
     uuid "^3.3.3"
 
-gatsby-plugin-tinacms@^0.1.17:
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.1.17.tgz#4ff16dc35ad12bf268cdca3c357c670a4bb2f624"
-  integrity sha512-3/Dy2E5VoWqi3qfIi/JkAujuVYoAQxvei3UZ9eOVCARcXQL30KfZWNrSq4W2ijg8sdS3mi/kZEweDc8xszjeVg==
-  dependencies:
-    "@tinacms/core" "^0.5.1"
-    "@types/cors" "^2.8.5"
-    "@types/express" "^4.17.0"
-    "@types/js-yaml" "^3.12.1"
-    "@types/lodash.throttle" "^4.1.6"
-    cors "^2.8.5"
-    express "^4.17.1"
-    js-yaml "^3.13.1"
-    lodash.throttle "^4.1.1"
-    tinacms "^0.11.0"
-
 gatsby-plugin-tinacms@^0.1.19:
   version "0.1.19"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.1.19.tgz#24bf227eb2df9a917c1120132b2b7ee2b7ae982f"
@@ -6113,7 +6089,7 @@ gatsby-telemetry@^1.1.46:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-tinacms-git@^0.2.15:
+gatsby-tinacms-git@^0.2.16:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.2.16.tgz#c921093876097fe2bc17cb38766f49bb907568c3"
   integrity sha512-WMc/gUjjY1cfdF7tkfR7/NHQvT4YpuX2KdNRyFfg7yLIFWqNIO4uriT69GfolhgstSGIMh/MG5WrbuQssZQgQQ==
@@ -6133,28 +6109,28 @@ gatsby-tinacms-git@^0.2.15:
     simple-git "1.124.0"
     tinacms "^0.11.2"
 
-gatsby-tinacms-json@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-json/-/gatsby-tinacms-json-0.8.1.tgz#ee705ec0f91ddcaeb7847a77aec467a1a98e95b5"
-  integrity sha512-QccXK08IZ7DB4z05hw40tXC/D5axdo1eAnk4xde/Vtn4KIv1efbPRguewoyopvNv59XjE0VQRdm4+YDwshwYng==
+gatsby-tinacms-json@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-json/-/gatsby-tinacms-json-0.8.3.tgz#b0025260fe6294e83b0739fa62fcab1b76d2ed65"
+  integrity sha512-tetmHv6Clw0M5SW//0TxVYOMXQ6ljXXEiBU4lGvIqTdVxwCBLw4M38npK1hCSQj1Mo9BnpJidYf7+oWv+Ycx+g==
   dependencies:
-    "@tinacms/core" "^0.5.1"
-    gatsby-plugin-tinacms "^0.1.17"
+    "@tinacms/core" "^0.6.0"
+    gatsby-plugin-tinacms "^0.1.19"
     graphql "^14.5.8"
     slash "^3.0.0"
-    tinacms "^0.11.0"
+    tinacms "^0.11.2"
 
-gatsby-tinacms-remark@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.6.1.tgz#559154ada62e87f6ff4222a19a74bc91574c64f8"
-  integrity sha512-p6hXIZGoFDeAtTY+Dppj940gcslJ4GWBAnpJNVUEOl3NVY2xfRlQEyjlG4D4Iq3AJoPX8qkX7AnX6JF6fe7hyg==
+gatsby-tinacms-remark@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.6.3.tgz#730d698e6ad57c9cc7bf7a032ed90ae418c14af5"
+  integrity sha512-/KlVMuyUXmZKL1DFuiLm6u7DOs/8Fp9V+EQNiw/cAM9rYfEV/VHVvSOS8uabK4eKaOvsTZL4bRxUcGEHckOOdA==
   dependencies:
-    "@tinacms/core" "^0.5.1"
-    "@tinacms/form-builder" "^0.2.9"
+    "@tinacms/core" "^0.6.0"
+    "@tinacms/form-builder" "^0.2.11"
     gray-matter "^4.0.2"
     lodash.get "^4.4.2"
     slash "^3.0.0"
-    tinacms "^0.11.0"
+    tinacms "^0.11.2"
 
 gatsby-tinacms-teams@^0.1.1:
   version "0.1.1"
@@ -13195,7 +13171,7 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
-tinacms@^0.11.0, tinacms@^0.11.2:
+tinacms@^0.11.2:
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-0.11.2.tgz#f492aaef824515eb2056451c5ed7a9bee6d094e8"
   integrity sha512-phD5jA25MIxk4PlnCmbN0g5MnL7zqZSsYEkV76Pu5S7qDbeMTEtQelsR7s71YOoSmjOo+zPVDO0qbGP02k1S1Q==
