@@ -69,7 +69,17 @@ module.exports = {
       options: {
         plugins: [
           "gatsby-tinacms-teams",
-          "gatsby-tinacms-git",
+          {
+            resolve: 'gatsby-tinacms-git',
+            options: {
+              pathToRepo: REPO_ABSOLUTE_PATH,
+              pathToContent: 'content',
+              defaultCommitMessage: 'Content Update ',
+              defaultCommitName: 'TinaCMS',
+              defaultCommitEmail: 'kendallstrautman@gmail.com',
+              pushOnCommit: false,
+            },
+          },
           "gatsby-tinacms-remark",
         ],
         sidebar: {
