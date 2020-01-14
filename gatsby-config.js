@@ -68,6 +68,7 @@ module.exports = {
       resolve: 'gatsby-plugin-tinacms',
       options: {
         plugins: [
+          "gatsby-tinacms-teams",
           "gatsby-tinacms-git",
           "gatsby-tinacms-remark",
         ],
