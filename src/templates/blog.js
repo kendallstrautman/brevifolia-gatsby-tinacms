@@ -2,10 +2,10 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 //this component handles the blur img & fade-ins
-import Img from 'gatsby-image'
-import { remarkForm } from 'gatsby-tinacms-remark'
+import Img from "gatsby-image"
+import { remarkForm } from "gatsby-tinacms-remark"
 
-import useBlogData from '../static_queries/useBlogData'
+import useBlogData from "../static_queries/useBlogData"
 import blogTemplateStyles from "../styles/templates/blog.module.scss"
 
 function Blog(props) {
@@ -18,7 +18,7 @@ function Blog(props) {
       return blog.node.fields.slug
     })
     const nextSlug = allSlugs[allSlugs.indexOf(slug) + 1]
-    if(nextSlug !== undefined && nextSlug !== '') {
+    if (nextSlug !== undefined && nextSlug !== "") {
       return nextSlug
     } else {
       return allSlugs[0]
@@ -43,12 +43,20 @@ function Blog(props) {
           dangerouslySetInnerHTML={{ __html: data.html }}
         ></div>
         <div className={blogTemplateStyles.blog__footer}>
-          <h2>
-            Written By: {data.frontmatter.author}
-          </h2>
-          <Link to={`blog/${nextSlug}`} className={blogTemplateStyles.footer__next}>
-            <svg xmlns="http://www.w3.org/2000/svg"  version="1.1" x="0px" y="0px" viewBox="0 0 26 26" enableBackground="new 0 0 26 26" >
-              <path d="M23.021,12.294l-8.714-8.715l-1.414,1.414l7.007,7.008H2.687v2h17.213l-7.007,7.006l1.414,1.414l8.714-8.713  C23.411,13.317,23.411,12.685,23.021,12.294z"/>
+          <h2>Written By: {data.frontmatter.author}</h2>
+          <Link
+            to={`blog/${nextSlug}`}
+            className={blogTemplateStyles.footer__next}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 26 26"
+              enableBackground="new 0 0 26 26"
+            >
+              <path d="M23.021,12.294l-8.714-8.715l-1.414,1.414l7.007,7.008H2.687v2h17.213l-7.007,7.006l1.414,1.414l8.714-8.713  C23.411,13.317,23.411,12.685,23.021,12.294z" />
             </svg>
           </Link>
         </div>
@@ -61,20 +69,20 @@ const BlogTemplateOptions = {
   fields: [
     {
       label: "Blog Title",
-      name: 'rawFrontmatter.title',
-      component: "text"
+      name: "rawFrontmatter.title",
+      component: "text",
     },
     {
       label: "Date Posted",
-      name: 'rawFrontmatter.date',
-      component: "date"
+      name: "rawFrontmatter.date",
+      component: "date",
     },
     {
       label: "Hero Image",
-      name: 'rawFrontmatter.hero_image',
+      name: "rawFrontmatter.hero_image",
       component: "image",
       // Generate the frontmatter value based on the filename
-      parse: filename => `/content/images/${filename}`,
+      parse: filename => `../images/${filename}`,
 
       // Decide the file upload directory for the post
       uploadDir: () => "/content/images/",
@@ -88,18 +96,18 @@ const BlogTemplateOptions = {
     //TODO: when select field is added, switch to select from authors.json
     {
       label: "Author",
-      name: 'rawFrontmatter.author',
-      component: "text"
+      name: "rawFrontmatter.author",
+      component: "text",
     },
     {
       label: "Blog Body",
-      name: 'rawMarkdownBody',
-      component: "markdown"
+      name: "rawMarkdownBody",
+      component: "markdown",
     },
-  ]
+  ],
 }
 
-export default remarkForm( Blog, BlogTemplateOptions )
+export default remarkForm(Blog, BlogTemplateOptions)
 
 //dynamic page query, must occur within each post context
 //$slug is made available by context from createPages call in gatsby-node.js
