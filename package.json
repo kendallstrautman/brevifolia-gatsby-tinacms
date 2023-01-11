@@ -32,7 +32,7 @@
     "gatsby-tinacms-json": "^0.8.12",
     "gatsby-tinacms-remark": "^0.7.7",
     "gatsby-transformer-json": "^2.2.16",
-    "gatsby-transformer-remark": "^2.6.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.1",
     "gatsby-transformer-yaml": "^2.2.4",
     "moment": "^2.24.0",
